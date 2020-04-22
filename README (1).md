@@ -67,9 +67,13 @@ The playbook implements the following tasks:
 2. Create a new playbook: touch /etc/ansible/install-elk.yml.
 3. Ensure that that header of the playbook must specify elkservers as the target hosts.
 4. Write tasks that do the following:
+  
   -Run this command through the shell: sysctl -w vm.max_map_count=262144
+  
   -Installs following packages
+      
       docker.io - Used for running containers
+      
       python-pip - installs python
       
       ![DockerPS path] (https://github.com/vinnymbarone/ELK.project/blob/master/Images/Dockerps.png)
