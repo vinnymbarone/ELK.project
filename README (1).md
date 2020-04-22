@@ -102,7 +102,7 @@ SSH into the control node and follow the steps below:
 
 - The ansible-playbook command will run the contents of the playbook.yml file. The name can be anything as long as it ends in ".yml"
          
-         -"ansible-playbook [name]-playbook.yml
+         - "ansible-playbook [name]-playbook.yml"
 
 - _Which file do you update to make Ansible run the playbook on a specific machine? 
    
