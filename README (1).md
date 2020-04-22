@@ -107,5 +107,6 @@ Filebeat: we are connecting our DVWA-VM1 to ELK Server, so we need to include EL
 ELK Server: We specify a remote user (machine admin name) in the ansible.cfg file and we list the IP address of our ELK server in the hosts file. 
 
 - _Which URL do you navigate to in order to check that the ELK server is running?
-    -https://23.96.86.187;5601/
+    
+    -https://23.96.86.187:5601/
 
