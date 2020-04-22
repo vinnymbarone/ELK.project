@@ -68,7 +68,9 @@ The playbook implements the following tasks:
 3. Ensure that that header of the playbook must specify elkservers as the target hosts.
 4. Write tasks that do the following:
   
-  -Run this command through the shell: sysctl -w vm.max_map_count=262144
+  -Run this command through the shell: 
+  
+      sysctl -w vm.max_map_count=262144
   
   -Installs following packages
       
@@ -84,11 +86,11 @@ This ELK server is configured to monitor the following machines:
 
 We have installed the following Beats on these machines:
 
--Filebeat
+    -Filebeat
 
 These Beats allow us to collect the following information from each machine:
 
-Filebeat is built to collect data, such as log events about specific files on remote machines, it must be installed on the VMs that you want to monitor.
+    Filebeat is built to collect data, such as log events about specific files on remote machines, it must be installed on the VMs that you want to monitor.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
@@ -99,18 +101,20 @@ SSH into the control node and follow the steps below:
 - Run the playbook, and navigate to curl localhost/setup.phpto to check that the installation worked as expected.
 
 - The ansible-playbook command will run the contents of the playbook.yml file. The name can be anything as long as it ends in ".yml"
-          -"ansible-playbook [name]-playbook.yml
+         
+         -"ansible-playbook [name]-playbook.yml
 
 - _Which file do you update to make Ansible run the playbook on a specific machine? 
-    - Update /etc/ansible/filebeat-configuration.yml and add remote machines (machine's IP) to it. 
+   
+      - Update /etc/ansible/filebeat-configuration.yml and add remote machines (machine's IP) to it. 
 
 How do I specify which machine to install the ELK server on versus which to install Filebeat on?
 
-Filebeat: we are connecting our DVWA-VM1 to ELK Server, so we need to include ELK Server IP. In the filebeat-configuration.yml file, we replace the IP address with the IP of the ELK Machine.
+    Filebeat: we are connecting our DVWA-VM1 to ELK Server, so we need to include ELK Server IP. In the filebeat-configuration.yml file, we replace the IP address with the IP of the ELK Machine.
 
 ELK Server: We specify a remote user (machine admin name) in the ansible.cfg file and we list the IP address of our ELK server in the hosts file. 
 
 - _Which URL do you navigate to in order to check that the ELK server is running?
     
-    -https://23.96.86.187:5601/
+      -https://23.96.86.187:5601/
 
