@@ -19,7 +19,7 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly distributed, in addition to restricting traffic to the network.
+Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
 The load balancer separates workloads across different servers. Load balancers also reroute live traffic to prevent the possibility of DDoS attacks that could make servers unavailable.
 
 A jump server or jump host or jumpbox is a (special-purpose) computer on a network typically used to access devices in a separate security zone. The most common example is managing a host in a DMZ from trusted networks or computers. 
@@ -44,7 +44,8 @@ The configuration details of each machine may be found below.
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the jump box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-10.0.0.4 and 13.82.93.18
+
+    *home network IP*
 
 Machines within the network can only be accessed by SSH Key.
 Allowed access from DVWA - VM1 to the ELK - VM 10.0.0.5
@@ -53,9 +54,9 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes.                |10.0.0.1 13.82.93.18  |
-| DVWA VM1 | No.                 |10.0.0.5              |
-| ELK-SRVR | Yes.                |10.0.0.7 23.96.88.187 |
+| Jump Box | Yes.                |home network IP       |
+| DVWA VM1 | No.                 |home network IP       |
+| ELK-SRVR | Yes.                |home network IP       |
 
 ### Elk Configuration
 
